@@ -1,0 +1,98 @@
+\thusetup{
+  %******************************
+  % 注意：
+  %   1. 配置里面不要出现空行
+  %   2. 不需要的配置信息可以删除
+  %******************************
+  %
+  %=====
+  % 秘级
+  %=====
+  secretlevel={秘密},
+  secretyear={10},
+  %
+  %=========
+  % 中文信息
+  %=========
+  ctitle={清华大学学位论文 \LaTeX\ 模板\\使用示例文档 v\version},
+  cdegree={工学硕士},
+  cdepartment={计算机科学与技术系},
+  cmajor={计算机科学与技术},
+  cauthor={薛瑞尼},
+  csupervisor={郑纬民教授},
+  cassosupervisor={陈文光教授}, % 副指导老师
+  ccosupervisor={某某某教授}, % 联合指导老师
+  % 日期自动使用当前时间，若需指定按如下方式修改：
+  % cdate={超新星纪元},
+  %
+  % 博士后专有部分
+  catalognumber     = {分类号},  % 可以留空
+  udc               = {UDC},  % 可以留空
+  id                = {编号},  % 可以留空： id={},
+  cfirstdiscipline  = {计算机科学与技术},  % 流动站（一级学科）名称
+  cseconddiscipline = {系统结构},  % 专 业（二级学科）名称
+  postdoctordate    = {2009 年 7 月——2011 年 7 月},  % 工作完成日期
+  postdocstartdate  = {2009 年 7 月 1 日},  % 研究工作起始时间
+  postdocenddate    = {2011 年 7 月 1 日},  % 研究工作期满时间
+  %
+  %=========
+  % 英文信息
+  %=========
+  etitle={An Introduction to \LaTeX{} Thesis Template of Tsinghua University v\version},
+  % 这块比较复杂，需要分情况讨论：
+  % 1. 学术型硕士
+  %    edegree：必须为Master of Arts或Master of Science（注意大小写）
+  %             “哲学、文学、历史学、法学、教育学、艺术学门类，公共管理学科
+  %              填写Master of Arts，其它填写Master of Science”
+  %    emajor：“获得一级学科授权的学科填写一级学科名称，其它填写二级学科名称”
+  % 2. 专业型硕士
+  %    edegree：“填写专业学位英文名称全称”
+  %    emajor：“工程硕士填写工程领域，其它专业学位不填写此项”
+  % 3. 学术型博士
+  %    edegree：Doctor of Philosophy（注意大小写）
+  %    emajor：“获得一级学科授权的学科填写一级学科名称，其它填写二级学科名称”
+  % 4. 专业型博士
+  %    edegree：“填写专业学位英文名称全称”
+  %    emajor：不填写此项
+  edegree={Doctor of Engineering},
+  emajor={Computer Science and Technology},
+  eauthor={Xue Ruini},
+  esupervisor={Professor Zheng Weimin},
+  eassosupervisor={Chen Wenguang},
+  % 日期自动生成，若需指定按如下方式修改：
+  % edate={December, 2005}
+  %
+  % 关键词用“英文逗号”分割
+  ckeywords={白癜风, 分割, 弱监督学习, 超像素},
+  ekeywords={Vitiligo, segmentation, weakly-supervised, superpixels}
+}
+
+% 定义中英文摘要和关键字
+\begin{cabstract}
+      白癜风是一种常见的皮肤色素脱失病，影响全世界 0.5\% 到 1\% 的人群，该病的主要特征是在体表形成大小无规则的白斑皮损，是一种严重影响外貌美观的疾病。白斑面积是临床治疗效果的重要评价指标, 白癜风在评估方法上缺乏共识，这使得分析或比较不同研究的结果变得困难。
+    
+    因此，根据现存方法的一些缺点，如计算量大、操作繁琐、对拍摄器材要求高、只适用于强对比度的图片等，本文提出了一个高效、简单、鲁棒性强的白癜风区域分割方法，这将有助于推进白癜风的评价体系的客观化，标准化进程。且在一定的场景下， 该方法同样可应用于其他病种皮损区域的分割。
+   
+     本文通过收集1000 张来自临床和网络的白癜风图片，制作了到目前为止最大的一个白癜风数据集 Vit2019，并且均进行了白癜风区域的像素级标注; 针对部分图像对比度低、皮损与正常皮肤过渡区域模糊等特点，提出了使用超像素分割方法作为图像预处理步骤，从而达到降低维度、剔除异常像素点、保留较完整准确的皮损边界等三个目的; 由于图像大小尺寸不一致，引出了经典超像素分割算法中初始种子点数目确定难的问题，并针对提出了改进的方法; 本文针对白癜风标注难的问题，提出了面向白癜风等色素性皮肤病的弱监督分割框架，将“既见森林，又见树木” 的策略应用于弱监督分割中，并将反馈思想与显著性传播过程相结合从而实现准确的分割。
+
+    本文通过多个实验验证了该弱监督方法的有效性，并与强监督学习的实验结果进行对比，验证了在一些拍照环境恶劣、对比度很低的情况下，本文提出的弱监督方法可以更好的分割白癜风区域并保留白癜风的边缘细节。
+
+\end{cabstract}
+
+% 如果习惯关键字跟在摘要文字后面，可以用直接命令来设置，如下：
+% \ckeywords{\TeX, \LaTeX, CJK, 模板, 论文}
+
+\begin{eabstract}
+    Vitiligo is a common skin pigmentation disease affecting 0.5\% to 1\% of the world. The main feature of this disease is the  irregular white spot lesions on the surface of the body, which is a serious affection of appearance. The area of white spot is an important evaluation index of clinical treatment effect. Due to lack of consensus on vitiligo evaluation methods, it is difficult to analyze or compare the results of different clinical treatments.
+    
+    Therefore, according to some shortcomings of the existing methods, such as huge computation cost, cumbersome operation, high requirements for shooting equipment, strictness for only strong contrast pictures, this paper proposes a vitiligo region segmentation framework with high efficiency, simplicity and robustness, which will help advance the objectification and standardization of the vitiligo evaluation system. 
+    
+    This paper porposed one of the largest vitiligo datasets, Vit2019, which has 1000 images of vitiligo from the clinical environment and the network, and all of which are pixel-levelly labeled;
+    Due to the low image contrast and blurred transition area, superpixel is used as image preprocessing to reduce the feature dimension, eliminate an abnormal pixel, and retain a more complete and accurate skin lesion boundary;
+     Due to the inconsistent image size, an improved method is proposed to tackle with the problem of determining the number of initial seeds in the classical superpixel algorithm;
+  and this paper proposed a weakly supervised segmentation framework for pigmented skin diseases such as vitiligo. The innovative strategy of “seeing both forests and trees” for weakly supervised segmentation is applied and also, this paper explains how to apply feedback ideas to the process of saliency propagation.
+    
+   The effectiveness of the weakly-supervised framework is verified by several experiments, which proves that the proposed method can even better segment the vitiligo region in some cases where the shooting environment is poor and the contrast is low. Surprisingly, the proposed method is also able to keep the edge details of the vitiligo better.
+    
+\end{eabstract}
+
